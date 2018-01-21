@@ -11,6 +11,17 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "test:coverage": "react-scripts test --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js", 
     "eject": "react-scripts eject"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/index.js",
+      "!src/registerServiceWorker.js"
+    ]
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.0"
   }
 }
