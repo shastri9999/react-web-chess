@@ -1,1 +1,1 @@
-# react-web-chess [![Build Status](https://travis-ci.org/shastri9999/react-web-chess.svg?branch=develop)](https://travis-ci.org/shastri9999/react-web-chess)
+# react-web-chess [![Build Status](https://travis-ci.org/shastri9999/react-web-chess.svg?branch=develop)](https://travis-ci.org/shastri9999/react-web-chess) [![Coverage Status](https://coveralls.io/repos/github/shastri9999/react-web-chess/badge.svg?branch=master)](https://coveralls.io/github/shastri9999/react-web-chess?branch=master)
