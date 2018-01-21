@@ -4,16 +4,15 @@ node_js:
 cache:
   directories:
   - node_modules
+before_script:
+  - "yarn global add firebase-tools"
 script:
-- npm run build
-- npm test
+  - yarn build
+  - yarn test
+after_success:
+  - "firebase deploy --token=${FIREBASE_API_TOKEN}"
 branches:
   only:
   - develop
-deploy:
-  provider: firebase
-  token:
-    secure: SG4hMV9mvhcMchYbw2qA0NkLmiV+itmfft+9IeUmdwu64wm1enc+hIgirYDciMXRwBqC13Wl2CdMAd9X9Cq+qyh2G9yxTtN2LAEAIsQJ2+EX6WLHvHEJfK7FtNX2KgT7MzG+5it7MnkNp5choPwQU3BS1e6Hcd2kHnqC4TZjGgQNnTSmtQeTRAAzkorSsvEpOpWZpy8BQYzT9jI4WKHMfNRCo4mI0mKCHjGAheyhO1eXhf9DMFZmWj99mxChHhnPt4glssA3cjvr1wtrJrALK/kX/lSbb3d87H9jsK9lMZiBl8exeiZgT+sGHJcQ7Aqj6xTMEb35EStFzcIX5IrwdNPmvx7UWAcsIBITsJ8WdcXrQ+0J3y6HJRu0KeoGNu+HFJT/6GEbsrH0h4ItHmYZF21ucSeavShLXf1croPFUaNbsMPrTwhxGrWoUVAMFatOLtS2cFpio4nOuJToQ8EZjn1MgDL1mGI9nHDQJvjd5tN9O97hUTmZ1k1Ti0/MZ7eBCkKNts+U+41X35um2gtYQ895I7dhvydweYBRX12v1gYwBclS9g8Ndr4Bl40usLT1XryFLoCC8+yaul45C2ik0C21qsSgcQEnZ3+++h3ir1ryMmTwI7fpRZP+4ei6uRlfUzCL3KwKDeASA63585+MWR0oNyHLps0AYl6sX+2Ufk8=
-  on:
-    branch: develop
-  message: "Firebase Deploy"
+env:
+  secure: 0V1vTZftX9VrIq2Li9dVzHodh3ro/Rdt+KoK0kxEsC6H7hBnlL35H5qEy3QjmwovYBuinIKuHUjMn2Nx/lD+I78uu0cK+S/w7arTS8CXAZAXtv3jbSp9tN4fbGUX2vaK/iBfMTv9/fn2+AXosNIGQZG6tIRxwNGaZN0K/Jegxbfj+K9qkqe0DoNoj1mO9ecZ8azK/WmQaHFq8cPof97KNo7IkN9h4s5lC8DFgmq9BxcUbvVivv6vTtTD9D3Q/E5LMcVbhESps0FM7VcVwFTjZ+u+Jv6WAONDpYQnlMcv7rAsAgzLiPYg/ANZMZzyPZvnbav4o4iOiaNL4Q6oswk0IOvk055/5i6qtbf7Jzz07M9T5y1xpN4kPRUpR5KY3B9ffzvT6IeSiOBPyp3IThrFp5hzuqxSIjyUDGQJhIJ9VGbjI59KCz/HT54bIx6IYcFhUqOmvciNrkADOMIN23AQ5NFpj59VHVTOnWUMay3+l8TNd6TLRqigv0n3fP2A0GwFeOJZyI3WcQ6uvzVefVNLq03HayZ4EdKbTmKqXcj+Tp2zIBv7XGE/2cbPQDEaf5impcDXef1g2w30a66KUFlSLBrnKtTuXsdeNaqqSBwkRq6nVBxO8mJrSwgwrDV3r8KaqhsXU6/R1vB2gzR6V/EwFcuuMZBrMjf5xYQ5eneg+44=
