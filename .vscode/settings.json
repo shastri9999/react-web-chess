@@ -8,5 +8,6 @@
   "editor.tabSize": 2,
   "editor.cursorBlinking": "solid",
   "editor.cursorStyle": "line-thin",
-  "prettier.singleQuote": false
+  "prettier.singleQuote": false,
+  "javascript.validate.enable": false
 }
