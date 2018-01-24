@@ -7,5 +7,6 @@
   "eslint.autoFixOnSave": true,
   "editor.tabSize": 2,
   "editor.cursorBlinking": "solid",
-  "editor.cursorStyle": "line-thin"
+  "editor.cursorStyle": "line-thin",
+  "prettier.singleQuote": false
 }
