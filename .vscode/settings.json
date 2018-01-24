@@ -1,0 +1,11 @@
+{
+  "editor.formatOnSave": true,
+  "prettier.printWidth": 80,
+  "prettier.tabWidth": 2,
+  "prettier.trailingComma": "es5",
+  "prettier.useTabs": false,
+  "eslint.autoFixOnSave": true,
+  "editor.tabSize": 2,
+  "editor.cursorBlinking": "solid",
+  "editor.cursorStyle": "line-thin"
+}
