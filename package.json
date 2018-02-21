@@ -16,7 +16,8 @@
     "test:coverage":
       "react-scripts test --env=jsdom --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "eject": "react-scripts eject",
-    "precommit": "pretty-quick --staged"
+    "precommit": "pretty-quick --staged",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -26,6 +27,7 @@
     ]
   },
   "devDependencies": {
+    "@storybook/react": "^3.3.14",
     "coveralls": "^3.0.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-config-standard": "^11.0.0-beta.0",
