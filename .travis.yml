@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+- 6
+cache:
+  directories:
+  - node_modules
+before_script:
+  - "yarn global add firebase-tools"
+script:
+  - yarn build
+  - yarn test:coverage
+after_success:
+  - "firebase deploy --token=${FIREBASE_API_TOKEN}"
+branches:
+  only:
+  - develop
+env:
+  secure: 0V1vTZftX9VrIq2Li9dVzHodh3ro/Rdt+KoK0kxEsC6H7hBnlL35H5qEy3QjmwovYBuinIKuHUjMn2Nx/lD+I78uu0cK+S/w7arTS8CXAZAXtv3jbSp9tN4fbGUX2vaK/iBfMTv9/fn2+AXosNIGQZG6tIRxwNGaZN0K/Jegxbfj+K9qkqe0DoNoj1mO9ecZ8azK/WmQaHFq8cPof97KNo7IkN9h4s5lC8DFgmq9BxcUbvVivv6vTtTD9D3Q/E5LMcVbhESps0FM7VcVwFTjZ+u+Jv6WAONDpYQnlMcv7rAsAgzLiPYg/ANZMZzyPZvnbav4o4iOiaNL4Q6oswk0IOvk055/5i6qtbf7Jzz07M9T5y1xpN4kPRUpR5KY3B9ffzvT6IeSiOBPyp3IThrFp5hzuqxSIjyUDGQJhIJ9VGbjI59KCz/HT54bIx6IYcFhUqOmvciNrkADOMIN23AQ5NFpj59VHVTOnWUMay3+l8TNd6TLRqigv0n3fP2A0GwFeOJZyI3WcQ6uvzVefVNLq03HayZ4EdKbTmKqXcj+Tp2zIBv7XGE/2cbPQDEaf5impcDXef1g2w30a66KUFlSLBrnKtTuXsdeNaqqSBwkRq6nVBxO8mJrSwgwrDV3r8KaqhsXU6/R1vB2gzR6V/EwFcuuMZBrMjf5xYQ5eneg+44=
