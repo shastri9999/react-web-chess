@@ -1,15 +1,16 @@
 // @flow
 import * as React from "react";
-import "./App.css";
+import "modern-normalize/modern-normalize.css";
+import { Main } from "./App.style";
 
 class App extends React.Component<{}> {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
+      <Main>
+        <header>
+          <h1>Welcome to React</h1>
         </header>
-      </div>
+      </Main>
     );
   }
 }
