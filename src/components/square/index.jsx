@@ -9,4 +9,9 @@ export type SquareProps = {
 
 const Square = (props: SquareProps) => <style.Square {...props} />;
 
+Square.defaultProps = {
+  color: "black",
+  size: "1em"
+};
+
 export default Square;
