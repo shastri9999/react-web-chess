@@ -1,4 +1,4 @@
-![Logo of the project](./assets/images/logo.png | width=50)
+<img src="./assets/images/logo.png" width="48">
 
 # React Web Chess [![Build Status](https://travis-ci.org/shastri9999/react-web-chess.svg?branch=develop)](https://travis-ci.org/shastri9999/react-web-chess) [![Coverage Status](https://coveralls.io/repos/github/shastri9999/react-web-chess/badge.svg?branch=develop)](https://coveralls.io/github/shastri9999/react-web-chess?branch=develop) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) [![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components)
 
